@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="/404.css">
+</head>
+<body>
+    <div class="container">
+        <div class="error-illustration">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+                <style>
+                    @keyframes search {
+                        0%, 100% { transform: translateX(0); }
+                        50% { transform: translateX(20px); }
+                    }
+                    @keyframes bounce {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-10px); }
+                    }
+                    .magnify { animation: search 2s infinite; }
+                    .character { animation: bounce 1s infinite; }
+                </style>
+
+                <!-- Magnifying Glass -->
+                <g class="magnify">
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="#3498db" stroke-width="4"/>
+                    <line x1="130" y1="130" x2="170" y2="170" stroke="#3498db" stroke-width="4"/>
+                </g>
+
+                <!-- Confused Character -->
+                <g class="character" transform="translate(200, 80)">
+                    <circle cx="0" cy="0" r="30" fill="#f39c12"/>
+                    <circle cx="-10" cy="-5" r="5" fill="white"/>
+                    <circle cx="10" cy="-5" r="5" fill="white"/>
+                    <path d="M-15,10 Q0,20 15,10" fill="none" stroke="white" stroke-width="3"/>
+                </g>
+
+                <!-- Broken Path -->
+                <path d="M50,50 L150,50 L100,150 L250,150" 
+                      fill="none" stroke="#e74c3c" stroke-width="4" stroke-dasharray="10,10"/>
+            </svg>
+        </div>
+        <h1 class="error-title">Oops! Page Not Found</h1>
+        <p class="error-description">
+            The page you're looking for seems to have gone on an unexpected adventure. 
+            Let's help you find your way back home.
+        </p>
+        <a href="/" class="home-link">Return Home</a>
+    </div>
+
+</body>
+</html>

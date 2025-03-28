@@ -1,0 +1,164 @@
+/* home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav button {
+    padding: 8px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #ddd;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#listings {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#listings h2 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+#listingsContainer {
+    min-height: 200px;
+}
+
+#listingsContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+#listingsContainer li {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+#listingsContainer li:last-child {
+    border-bottom: none;
+}
+
+#listingsContainer li:hover {
+    background-color: #f9f9f9;
+}
+
+#listingsContainer h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+#listingsContainer p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 10px;
+    }
+    
+    nav button {
+        margin: 5px;
+    }
+    
+    #listingsContainer li {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Footer styles to append to home.css, add-listing.css, and success.css */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav {
+    margin-top: 5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    footer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer a {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,31 @@
+<!-- index.html -->
+<%- include('partials/head', { pageTitle: 'Home', cssFile: '/home.css' }) %>
+<body>
+    <header>
+        <h1>Simple Airbnb</h1>
+        <nav>
+            <a href="/add-listing"><button>Add Listing</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Listings Display -->
+        <section id="listings">
+            <h2>Available Listings</h2>
+            <div id="listingsContainer">
+                <ul>
+                    <% listings.forEach(home => { %>
+                        <li>
+                            <h3><%= home.title %></h3>
+                            <p><%= home.location %></p>
+                            <p>Price: $<%= home.price %>/night</p>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

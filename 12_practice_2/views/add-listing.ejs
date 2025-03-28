@@ -1,0 +1,31 @@
+<%- include('partials/head', { pageTitle: 'Add Listing', cssFile: '/add-listing.css' }) %>
+<body>
+        <nav>
+            <a href="/"><button>Back to Listings</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="listingForm">
+            <h2>Add New Listing</h2>
+            <form id="newListingForm" action="/add-listing" method="POST">
+                <div>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div>
+                    <label for="price">Price per night ($):</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <button type="submit">Add Listing</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
